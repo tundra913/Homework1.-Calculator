@@ -13,7 +13,7 @@ public class Calculator {
             } catch (ArithmeticException e) {
                 System.out.println("Argument 'divisor' is 0");
             }
-            return y;
+          //  return y;
         }
         return x / y;
     };
