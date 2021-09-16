@@ -4,9 +4,12 @@ public class Main {
 
         int a = calc.plus.apply(1, 2);
         int b = calc.minus.apply(1, 1);
-        int c = calc.devide.apply(a, b); //выбрасывается исключение, деление на ноль.
-        // отработала через try/catch в лямбда-выражении.
-
-        calc.println.accept(c);
+        try {
+            int c = calc.devide.apply(a, b);
+            calc.println.accept(c);
+        }
+        catch (ArithmeticException e) {
+            System.out.println("Argument 'divisor' is 0");
+        }
     }
 }
